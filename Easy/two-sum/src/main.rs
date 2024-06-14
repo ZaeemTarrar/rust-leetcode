@@ -12,39 +12,40 @@ fn run(task: fn(nums: Vec<i32>, target: i32) -> Vec<i32>) {
     ];
     for (k, v) in inputs.iter().enumerate() {
         let result = task(v.0.clone(), v.1);
-        println!("Result[{}]: {:?}", k, result);
+        // println!("Result[{}]: {:?}", k, result);
     }
 }
 
-fn run_time(task: fn(nums: Vec<i32>, target: i32) -> Vec<i32>) {
+fn run_time(task: fn(nums: Vec<i32>, target: i32) -> Vec<i32>) -> String {
     let start_time = Instant::now();
     run(task);
     let end_time = Instant::now();
     let duration = end_time - start_time;
-    println!("\nRun Duration: [{:?}]\n", duration);
+    return format!("\nRun Duration: [{:?}]\n", duration);
 }
 
 fn multi_run(cycles: u32, task: fn(nums: Vec<i32>, target: i32) -> Vec<i32>) {
     for i in 0..cycles {
-        println!("\n<=== Cycle: [{}] ===>\n", i + 1);
+        // println!("\n<=== Cycle: [{}] ===>\n", i + 1);
         run(task);
     }
 }
 
-fn multi_run_time(cycles: u32, task: fn(nums: Vec<i32>, target: i32) -> Vec<i32>) {
+fn multi_run_time(cycles: u32, task: fn(nums: Vec<i32>, target: i32) -> Vec<i32>) -> String {
     let start_time = Instant::now();
     multi_run(cycles, task);
     let end_time = Instant::now();
     let duration = end_time - start_time;
-    println!("\nRun Duration: [{:?}]\n", duration);
+    return format!("\nMulti-Run Duration: [{:?}]\n", duration);
 }
 
 fn main() {
+    let cycles = 10_00_000; // 1 million
     // Solution 1
-    run_time(sol1::two_sum);
-    // multi_run_time(10_00_000, sol1::two_sum); // 1 million
+    println!("{}", run_time(sol1::two_sum));
+    println!("{}", multi_run_time(cycles, sol1::two_sum));
 
     // Solution 2
-    run_time(sol2::two_sum);
-    // multi_run_time(10_00_000, sol2::two_sum); // 1 million
+    println!("{}", run_time(sol2::two_sum));
+    println!("{}", multi_run_time(cycles, sol2::two_sum));
 }
