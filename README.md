@@ -1,6 +1,7 @@
 <div align="center" >
 <img style="height:100px;" src=".github/assets/leetcode.png" >
 <img style="height:100px;" src=".github/assets/rust.gif" >
+<img style="height:100px;" src=".github/assets/cargo.png" >
 
 
 # <img style="width:30px;" src="https://static-00.iconduck.com/assets.00/light-bulb-emoji-676x1024-9a89i8im.png" /><span>&nbsp;</span>  LeetCode Problems in RUST
@@ -22,34 +23,34 @@ LeetCode problems solved in Rust, optimized for the best performance and memory 
 
 ## Tech-Info
 
-Rust: `v22.1.0`
+Rust: `1.78.0`
 
-Cargo: `10.7.0`
-
-<br />
-
-## Pre-Installation
-
-Make sure you are not inside any folder.
-
-```sh
-sudo npm install ;
-```
+Cargo: `1.78.0`
 
 <br />
 
-## How to run
+<br />
 
-Go to the solution directory
+## How to run Solo File
 
 ```sh
-cd ./Easy/Two \Sum/ ; 
+cd ./folder/ ;
+rustc ./main.rs ;
+./main ; 
 ```
 
-Run solution as follows
+## How to create Cargo Project
 
 ```sh
-node ./run.js ;
+cargo new abc-project ;
+```
+
+## How to run Cargo Project
+
+```sh
+cd ./cargo-project/ ;
+cargo clean ;
+cargo run ;
 ```
 
 <br />
