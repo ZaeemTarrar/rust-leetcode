@@ -21,3 +21,15 @@
 </div>
 
 <br />
+
+**Solution-2:**
+
+```javascript
+// Code
+```
+
+<div align="center" >
+<img style="width:70%;" src=".github/assets/sol2.png" />
+</div>
+
+<br />
