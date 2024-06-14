@@ -33,7 +33,7 @@ Cargo: `1.78.0`
 
 ## How to run Solo File
 
-```sh
+```cmd
 cd ./folder/ ;
 rustc ./main.rs ;
 ./main ; 
