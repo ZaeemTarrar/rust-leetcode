@@ -1,6 +1,6 @@
 <div align="center" >
-<img style="width:100px;" src=".github/assets/leetcode.png" >
-<img style="width:100px;" src=".github/assets/rust.gif" >
+<img style="height:100px;" src=".github/assets/leetcode.png" >
+<img style="height:100px;" src=".github/assets/rust.gif" >
 
 
 # <img style="width:30px;" src="https://static-00.iconduck.com/assets.00/light-bulb-emoji-676x1024-9a89i8im.png" /><span>&nbsp;</span>  LeetCode Problems in RUST
