@@ -3,6 +3,7 @@ use std::time::Instant;
 mod solutions;
 use crate::solutions::sol1::sol1;
 use crate::solutions::sol2::sol2;
+use crate::solutions::sol3::sol3;
 
 fn run(task: fn(nums: Vec<i32>, target: i32) -> Vec<i32>) {
     let inputs: [(Vec<i32>, i32); 3] = [
@@ -12,7 +13,7 @@ fn run(task: fn(nums: Vec<i32>, target: i32) -> Vec<i32>) {
     ];
     for (k, v) in inputs.iter().enumerate() {
         let result = task(v.0.clone(), v.1);
-        // println!("Result[{}]: {:?}", k, result);
+        println!("Result[{}]: {:?}", k, result);
     }
 }
 
@@ -43,9 +44,13 @@ fn main() {
     let cycles = 10_00_000; // 1 million
     // Solution 1
     println!("{}", run_time(sol1::two_sum));
-    println!("{}", multi_run_time(cycles, sol1::two_sum));
+    // println!("{}", multi_run_time(cycles, sol1::two_sum));
 
     // Solution 2
     println!("{}", run_time(sol2::two_sum));
-    println!("{}", multi_run_time(cycles, sol2::two_sum));
+    // println!("{}", multi_run_time(cycles, sol2::two_sum));
+
+    // Solution 3
+    println!("{}", run_time(sol3::two_sum));
+    // println!("{}", multi_run_time(cycles, sol3::two_sum));
 }

@@ -33,3 +33,16 @@
 </div>
 
 <br />
+
+**Solution-3:**
+
+```javascript
+// Code
+```
+
+<div align="center" >
+<img style="width:70%;" src=".github/assets/sol3.png" />
+</div>
+
+<br />
+
